@@ -1,8 +1,7 @@
 package com.example.springboot.service;
 
-import com.example.springboot.dto.ReviewListDto;
-import java.util.List;
+import com.example.springboot.dto.ReviewDto;
 
 public interface CsvParserService {
-    ReviewListDto parseCsvRecords(List<String> records);
+    ReviewDto parseLine(String str);
 }
