@@ -27,20 +27,20 @@ class CsvParserServiceImplTest {
             expectedDto.setText("The flavor is very medicinal.");
         Assert.assertEquals("FAILED! Unexpected result",
                 expectedDto,
-                new CsvParserServiceImpl().parseLine(RECORD));
+                new ReviewCsvParserServiceImpl().parseLine(RECORD));
     }
 
     @Test
     public void parseWrongFormatRecords() {
         assertThrows(RuntimeException.class, () -> {
-            new CsvParserServiceImpl().parseLine(WRONG_FORMAT_RECORD);
+            new ReviewCsvParserServiceImpl().parseLine(WRONG_FORMAT_RECORD);
         });
     }
 
     @Test
     public void parseNullListRecords() {
         assertThrows(RuntimeException.class, () -> {
-            new CsvParserServiceImpl().parseLine(null);
+            new ReviewCsvParserServiceImpl().parseLine(null);
         });
     }
 }

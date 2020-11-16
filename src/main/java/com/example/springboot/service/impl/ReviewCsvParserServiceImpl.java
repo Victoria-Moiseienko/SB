@@ -6,7 +6,7 @@ import com.opencsv.CSVParser;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CsvParserServiceImpl implements CsvParserService {
+public class ReviewCsvParserServiceImpl implements CsvParserService<ReviewDto> {
     private static final int ID_IND = 0;
     private static final int PRODUCT_ID_IND = 1;
     private static final int USER_ID_IND = 2;
